@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
 
 gem 'rails', '4.1.6'
 gem 'jquery-rails'
@@ -11,6 +11,7 @@ gem 'will_paginate', '~> 3.0.5'
 gem 'fontello_rails_converter'
 gem 'devise'
 
+gem 'unicorn'
 group :assets do
 	gem 'sass-rails', '~> 4.0.3'
 	gem 'coffee-rails', '~> 4.0.0'
