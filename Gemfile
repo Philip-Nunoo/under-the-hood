@@ -21,7 +21,7 @@ group :doc do
 end
 
 group :production do
-	
+
 end
 
 group :development do
@@ -29,6 +29,7 @@ group :development do
 	gem 'faker'
 	gem 'fabricator'
 	gem 'pry'
+	gem 'zeus'
 end
 
 group :development, :test do
