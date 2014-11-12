@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans:300italic,400italic,800italic,400,300,700,800,600);
+body {
+  font-weight: 100;
+  font-family: "Open Sans", sans-serif; }
+
+#coming-soon {
+  width: 40%;
+  margin: 175px auto;
+  text-align: center; }
+
+.title {
+  font-size: 60px; }
+
+.sub-title {
+  font-size: 20px;
+  letter-spacing: 0.5em; }
+
+.sub-title2 {
+  font-size: 13px;
+  color: #888;
+  letter-spacing: 0.3em;
+  margin-top: 30px; }
+
+.input {
+  margin: 10px 0px; }
+  .input input[type="email"] {
+    border: 0px;
+    text-align: center;
+    border-bottom: dotted 1px;
+    font-size: 17px; }
+    .input input[type="email"]:focus, .input input[type="email"]:active {
+      border: 0px;
+      padding: 7px; }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
