@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   get 'welcome/coming_soon'
 
+  post 'login' => 'user#sign_in_user', :as=>:login
+  post 'register' => 'user#create_user', :as=>:register
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
