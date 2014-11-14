@@ -5,7 +5,7 @@ AllCops:
     - config.ru
   Exclude:
     - db/schema.rb
-    - spec/*
-    - config/*
-    - test/*
-    - db/*
+    - spec/**/*
+    - config/**/*
+    - test/**/*
+    - db/**/*
