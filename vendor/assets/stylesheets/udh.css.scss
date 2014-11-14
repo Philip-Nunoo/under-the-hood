@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'udh';
+  src: url(font-path('udh.eot?98305925'));
+  src: url(font-path('udh.eot?98305925#iefix')) format('embedded-opentype'),
+       url(font-path('udh.woff?98305925')) format('woff'),
+       url(font-path('udh.ttf?98305925')) format('truetype'),
+       url(font-path('udh.svg?98305925#udh')) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'udh';
+    src: url(font-path('udh.svg?98305925#udh')) format('svg');
+  }
+}
+*/
+ 
+ %icon-base {
+  font-family: "udh";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+%icon-male:before { @extend %icon-base; content: '\e800'; } /* '' */
+%icon-lemon:before { @extend %icon-base; content: '\e801'; } /* '' */
+%icon-users:before { @extend %icon-base; content: '\e802'; } /* '' */
+%icon-users-outline:before { @extend %icon-base; content: '\e803'; } /* '' */
+%icon-emo-sunglasses:before { @extend %icon-base; content: '\e804'; } /* '' */
+%icon-paper-plane:before { @extend %icon-base; content: '\e805'; } /* '' */
+%icon-leaf:before { @extend %icon-base; content: '\e806'; } /* '' */
+%icon-feather:before { @extend %icon-base; content: '\e807'; } /* '' */
+%icon-paper-plane-empty:before { @extend %icon-base; content: '\e808'; } /* '' */
+%icon-paper-plane-1:before { @extend %icon-base; content: '\e809'; } /* '' */
+%icon-logout:before { @extend %icon-base; content: '\e80a'; } /* '' */
+%icon-comment:before { @extend %icon-base; content: '\e80b'; } /* '' */
+%icon-pencil:before { @extend %icon-base; content: '\e80c'; } /* '' */
+%icon-edit:before { @extend %icon-base; content: '\e80d'; } /* '' */
+%icon-pencil-1:before { @extend %icon-base; content: '\e80e'; } /* '' */
+%icon-pencil-alt:before { @extend %icon-base; content: '\e80f'; } /* '' */
+%icon-edit-1:before { @extend %icon-base; content: '\e810'; } /* '' */
+%icon-pencil-2:before { @extend %icon-base; content: '\e811'; } /* '' */
+%icon-logout-1:before { @extend %icon-base; content: '\e812'; } /* '' */
+%icon-login:before { @extend %icon-base; content: '\e813'; } /* '' */
+
+.icon-male { @extend %icon-male; }
+.icon-lemon { @extend %icon-lemon; }
+.icon-users { @extend %icon-users; }
+.icon-users-outline { @extend %icon-users-outline; }
+.icon-emo-sunglasses { @extend %icon-emo-sunglasses; }
+.icon-paper-plane { @extend %icon-paper-plane; }
+.icon-leaf { @extend %icon-leaf; }
+.icon-feather { @extend %icon-feather; }
+.icon-paper-plane-empty { @extend %icon-paper-plane-empty; }
+.icon-paper-plane-1 { @extend %icon-paper-plane-1; }
+.icon-logout { @extend %icon-logout; }
+.icon-comment { @extend %icon-comment; }
+.icon-pencil { @extend %icon-pencil; }
+.icon-edit { @extend %icon-edit; }
+.icon-pencil-1 { @extend %icon-pencil-1; }
+.icon-pencil-alt { @extend %icon-pencil-alt; }
+.icon-edit-1 { @extend %icon-edit-1; }
+.icon-pencil-2 { @extend %icon-pencil-2; }
+.icon-logout-1 { @extend %icon-logout-1; }
+.icon-login { @extend %icon-login; }
