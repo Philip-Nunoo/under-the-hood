@@ -14,13 +14,39 @@ class User < ActiveRecord::Base
 
   validates :password,
             presence: { message: 'No password entered' },
-            confirmation: true
+            confirmation: true,
+            length: { minimum: 5, maximum: 120 }, on: :create
 
   validates :password_confirmation,
-            presence: { message: 'Please confirm password' }
+            presence: { message: 'Please confirm password' },
+            on: :create
+
+  def update_without_password(params, *options)
+    params.delete :password
+    params.delete :password_confirmation
+
+    # Update User attributes
+    update_attributes params, *options
+    # Remove fields in params
+    sanitize_for_pass params
+
+    pass = Pass.find_by user: self
+    pass.update_without_password params
+  end
+
+  def update(params, *options)
+    if params[:password].eql? params[:password_confirmation]
+      super
+      sanitize_for_pass params
+      pass = Pass.find_by user: self
+      pass.update_attributes params
+    else
+      false
+    end
+  end
 
   def login_user(password)
-    if @pass.valid_password?(password)
+    if pass.valid_password?(password)
       return true
     else
       return false
@@ -38,5 +64,10 @@ class User < ActiveRecord::Base
   def save_pass
     @pass.user = self
     @pass.save
+  end
+
+  # Remove fields in params
+  def sanitize_for_pass(params)
+    params.delete :username
   end
 end

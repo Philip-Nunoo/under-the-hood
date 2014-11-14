@@ -1,12 +1,8 @@
 <div>
-	<%= form_for @user_profile, :url=>{:controller=>:dashboard} do |f| %>
+	<%= form_for @user_profile, url:{ controller: :dashboard, action: :profile } do |f| %>
 	<p>
-		<%= f.label :user_name %>
-		<%= f.text_field :user_name %>
-	</p>
-	<p>
-		<%= f.label :user_name %>
-		<%= f.text_field :user_name %>
+		<%= f.label :username %>
+		<%= f.text_field :username %>
 	</p>
 	<p>
 		<%= f.label :email %>

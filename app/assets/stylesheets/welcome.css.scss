@@ -1,50 +1,50 @@
 @import url(http://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans:300italic,400italic,800italic,400,300,700,800,600);
 
-$font1: 'Open Sans', sans-serif;
-$font2: 'Calligraffitti', cursive;
+$font1: "Open Sans", sans-serif;
+$font2: "Calligraffitti", cursive;
 
-body{
-	font-weight: 100;
-	font-family: 'Open Sans', sans-serif;
-}
-#coming-soon{
-	width: 40%;
-	margin: 175px auto;
-	text-align: center;
+body {
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
 }
 
-.title{
-	font-size: 60px;
+#coming-soon {
+    width: 40%;
+    margin: 175px auto;
+    text-align: center;
 }
 
-.sub-title{
-	font-size: 20px;
-	letter-spacing: 0.5em;
+.title {
+    font-size: 60px;
 }
 
-.sub-title2{
-	font-size: 13px;
-	color: #888;
-	letter-spacing: 0.3em;
-	margin-top: 30px;
+.sub-title {
+    font-size: 20px;
+    letter-spacing: 0.5em;
 }
 
-.input{
-	margin: 10px 0px;
-	input[type="email"]{
-		border: 0px;
-		text-align: center;
-		border-bottom: dotted 1px;
-		font-size: 17px;
-
-		&:focus, &:active{
-			border: 0px;
-			padding: 7px;
-		}
-	}
+.sub-title2 {
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 0.3em;
+    margin-top: 30px;
 }
 
-.field_with_errors{
-	color: #A20;
-	content: " ";
+.input {
+    margin: 10px 0px;
+    input[type="email"] {
+        border: 0px;
+        text-align: center;
+        border-bottom: dotted 1px;
+        font-size: 17px;
+        &:focus, &:active {
+            border: 0px;
+            padding: 7px;
+        }
+    }
+}
+
+.field_with_errors {
+    color: #A20;
+    content: " ";
 }

@@ -28,7 +28,7 @@ class UserController < ApplicationController
   private
 
   def user_params
-    allow = [:email, :password, :password_confirmation]
+    allow = [:username, :email, :password, :password_confirmation]
     # binding.pry
     params.require(:user).permit(allow)
   end

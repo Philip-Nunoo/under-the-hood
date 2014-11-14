@@ -12,6 +12,33 @@ class DashboardController < ApplicationController
   end
 
   def profile
-    @user_profile = User.new
+    @user_profile = current_pass.user
+  end
+
+  def profile_update
+    @user_profile = current_pass.user
+    if needs_password?(user_params)
+      if @user_profile.update user_params
+      else
+      end
+    else
+      if @user_profile.update_without_password user_params
+      else
+      end
+    end
+    current_pass.reload
+    render :profile
+  end
+
+  private
+
+  def needs_password?(user_params)
+    !user_params[:password].blank?
+  end
+
+  def user_params
+    allow = [:username, :email, :password, :password_confirmation]
+    # binding.pry
+    params.require(:user).permit(allow)
   end
 end

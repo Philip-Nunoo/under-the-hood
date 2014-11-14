@@ -3,14 +3,16 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'welcome/coming_soon'
 
-  post 'login'        => 'user#sign_in_user',   :as=>:login
-  post 'register'     => 'user#create_user',    :as=>:register
+  post 'login'        => 'user#sign_in_user',   as: :login
+  post 'register'     => 'user#create_user',    as: :register
 
   # Dashboard
-  get 'dashboard'     => 'dashboard#index',     :as=>:dashboard_index
-  get 'logout'        => 'dashboard#logout',    :as=> 'logout'
-  get 'settings'      =>  'dashboard#profile',  :as=>'settings'
-  # The priority is based upon order of creation: first created -> highest priority.
+  get 'dashboard'     => 'dashboard#index',            as: :dashboard_index
+  get 'logout'        => 'dashboard#logout',           as: :logout
+  get 'settings'      => 'dashboard#profile',          as: :settings
+  patch 'settings'     => 'dashboard#profile_update',   as: :edit_user_settings
+  # The priority is based upon order of creation: first
+  # created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
@@ -22,7 +24,8 @@ Rails.application.routes.draw do
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
-  # Example resource route (maps HTTP verbs to controller actions automatically):
+  # Example resource route (maps HTTP verbs to controller
+  # actions automatically):
   #   resources :products
 
   # Example resource route with options:

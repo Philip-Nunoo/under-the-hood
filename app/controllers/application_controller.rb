@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       super
     else
       flash[:notice] = 'Please sign in to continue'
-      redirect_to :welcome_index && return
+      redirect_to :welcome_index
     end
   end
 end
