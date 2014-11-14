@@ -1,0 +1,27 @@
+<div>
+	<%= form_for @user_profile, :url=>{:controller=>:dashboard} do |f| %>
+	<p>
+		<%= f.label :user_name %>
+		<%= f.text_field :user_name %>
+	</p>
+	<p>
+		<%= f.label :user_name %>
+		<%= f.text_field :user_name %>
+	</p>
+	<p>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</p>
+	<p>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+	</p>
+	<p>
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+	</p>
+	<p>
+		<%= f.submit :update %>
+	</p>
+	<% end %>
+</div>

@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
   root 'welcome#coming_soon'
   get 'welcome/index'
-
   get 'welcome/coming_soon'
 
-  post 'login' => 'user#sign_in_user', :as=>:login
-  post 'register' => 'user#create_user', :as=>:register
+  post 'login'        => 'user#sign_in_user',   :as=>:login
+  post 'register'     => 'user#create_user',    :as=>:register
 
+  # Dashboard
+  get 'dashboard'     => 'dashboard#index',     :as=>:dashboard_index
+  get 'logout'        => 'dashboard#logout',    :as=> 'logout'
+  get 'settings'      =>  'dashboard#profile',  :as=>'settings'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -61,4 +64,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  devise_for :passes
 end

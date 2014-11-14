@@ -1,8 +1,11 @@
+# Controller to be used with the welcome page
+# Extends the Application Controller
 class WelcomeController < ApplicationController
-  def index
-  	@user = User.new
-  end
+    def index
+        @login = User.new
+        @register = User.new
+    end
 
-  def coming_soon
-  end
+    def coming_soon
+    end
 end

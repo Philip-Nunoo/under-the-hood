@@ -34,6 +34,7 @@ group :development do
 	gem 'fabricator'
 	gem 'pry'
 	gem 'zeus'
+	gem 'rubocop', require: false
 end
 
 group :development, :test do

@@ -1,7 +1,11 @@
-<%= form_for @user, :url=>{:controller=>:user, :action=>:sign_in_user} do |f|%>
+<%= form_for @login, :url=>{:controller=>:user, :action=>:sign_in_user} do |f|%>
 <p>
 	<%= f.label :email %><br/>
 	<%= f.text_field :email %>
+</p>
+<p>
+	<%= f.label :password %><br/>
+	<%= f.password_field :password %>
 </p>
 <p>
 	<%= f.submit "Login" %>
