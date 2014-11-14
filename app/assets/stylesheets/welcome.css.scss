@@ -1,17 +1,40 @@
+@import "foundation/components/global";
+@import "foundation/components/grid";
+@import "foundation/components/top-bar";
 @import url(http://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans:300italic,400italic,800italic,400,300,700,800,600);
 
 $font1: "Open Sans", sans-serif;
 $font2: "Calligraffitti", cursive;
+$ripe-lemon: #F7CA18;
+$saffron: #F4D03F;
+$primary-color: $ripe-lemon;
+$primary-color-shade: $saffron;
 
+h1, h2, h3, h4, h5, h6{
+    font-family: $font1;
+}
+a {
+    text-decoration: none;
+}
+
+body,html{
+
+}
 body {
     font-weight: 100;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $font1;
+    height: 100%;
 }
 
 #coming-soon {
     width: 40%;
     margin: 175px auto;
     text-align: center;
+
+    .input{
+        width: 300px;
+        margin: auto;
+    }
 }
 
 .title {
@@ -47,4 +70,15 @@ body {
 .field_with_errors {
     color: #A20;
     content: " ";
+}
+
+section{
+    &#home{
+        height: 93%;
+        padding-top: 12px;
+        background-color: $primary-color;
+    }
+    &#how{
+        padding: 12px;
+    }
 }

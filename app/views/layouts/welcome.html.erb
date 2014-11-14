@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>UnderTheHood</title>
-  <%= stylesheet_link_tag    'welcome', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'welcome', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>UnderTheHood</title>
+	<%= stylesheet_link_tag    'welcome', media: 'all', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-How 
-Pricing
-Sign Up
-Sign In
-Contact
-Help
-</nav>
-<%= yield %>
+	<div class="fixed">
+		<nav class="top-bar" data-topbar role="navigation">
+			<div class="row">
+				<div class="large-9 columns large-centered">
+				<ul class="title-area">
+					<li class="name">
+						<h1><a href="#">Under The Hood</a></h1>
+					</li>
+					<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+					<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+				</ul>
 
+				<section class="top-bar-section">
+					<!-- Right Nav Section -->
+					<ul class="right">
+						<li class=""><a href="#">How</a></li>
+						<li class=""><%= link_to 'Pricing' %></li>
+						<li class=""><%= link_to 'Sign Up' %></li>
+						<li class=""><%= link_to 'Login' %></li>
+						<li class=""><%= link_to 'Contact' %></li>
+					</ul>
+				</section>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<div style="margin-top: 40px; height: 100%;">
+	<%= yield %>
+	</div>
+
+	<%= javascript_include_tag 'welcome', 'data-turbolinks-track' => true %>
 </body>
 </html>
