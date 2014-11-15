@@ -1,7 +1,7 @@
 /*
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
-*/
+  */
 /*
 *= require udh
 */
@@ -15,22 +15,74 @@ $font1: "Open Sans", sans-serif;
 $font2: "Calligraffitti", cursive;
 $ripe-lemon: #F7CA18;
 $saffron: #F4D03F;
+$cream-can: #F5D76E;
 $primary-color: $ripe-lemon;
 $primary-color-shade: $saffron;
+$primary-color3: $cream-can;
+$grey: #DDD;
+$black: #333;
 
 h1, h2, h3, h4, h5, h6{
-    font-family: $font1;
+	font-family: $font1;
 }
 
 a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 body,html{
 
 }
 body {
-    font-weight: 100;
-    font-family: $font1;
-    height: 100%;
+	font-weight: 100;
+	font-family: $font1;
+	height: 100%;
+}
+
+nav{
+	background-color: $primary-color;
+	color: #FFF;
+	padding: 6px;
+	position: absolute;
+	width: 84%;
+	display: block;
+	right: 0;
+	
+	a{
+		font-size: 13px;
+		color: $black;
+		padding: 0px 5px;
+
+		&:hover{
+			color: $grey;
+		}
+	}
+}
+
+.left-nav{
+	width: 16%;
+	background-color: #1F5C5C;
+	height: 100%;
+	padding-top: 20px;
+	float: left;
+
+	a{
+		display: block;
+		text-align: left;
+		color: $grey;
+		padding: 4px 12px;
+		font-size: 13px;
+
+		&:hover{
+			background-color: #5F9B9B;
+		}
+	}
+}
+
+.content-right{
+	width: 84%;
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 31px;
 }

@@ -7,13 +7,54 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div>
-		Welcome <%= current_pass.user.username %>
-		<%= link_to :Home, :dashboard_index%> 
-		<%= link_to :Logout, :logout %> 
-		<%= link_to :Settings, :settings%>
+	<nav>
+		<div>
+			<div class="row">
+				<div class="">
+					Welcome <%= current_pass.user.username %>
+					<div class="right">
+						<%= link_to :Home, :dashboard_index%> 
+						<%= link_to :Logout, :logout, {:class=>"icon-logout"} %> 
+						<%= link_to :Settings, :settings, {:class=>"icon-cog-alt"}%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="left-nav">	
+		<a href="">
+			<i class="icon-pencil-alt"></i>
+			Compose Message
+		</a>
+		<a href="">
+			<i class="icon-edit-2"></i>
+			Drafts
+		</a>
+		<a href="">
+			<i class="icon-th-list"></i>
+			All Messages
+		</a>
+		<a href="">
+			<i class="icon-download"></i>
+			Received Messages
+		</a>
+		-------------------<br/>	
+		<a href="">
+			<i class="icon-emo-sunglasses"></i>
+			Create a Hood
+		</a>
+
+		<a href="">
+			<i class="icon-params"></i>
+			Settings
+		</a>
+		<a href="">
+			<i class="icon-users-outline"></i>
+			Profile
+		</a>
 	</div>
-	<div>
+	<div class="content-right" style="height: 100%">
 		<%= yield %>
 	</div>
 </body>
