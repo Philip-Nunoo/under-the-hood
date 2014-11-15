@@ -26,7 +26,9 @@ class DashboardController < ApplicationController
       else
       end
     end
-    current_pass.reload
+    sign_out :pass
+    pass = Pass.find_by user: @user_profile
+    sign_in :pass, pass
     render :profile
   end
 

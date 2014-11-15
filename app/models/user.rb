@@ -54,9 +54,9 @@ class User < ActiveRecord::Base
   end
 
   def set_pass
-    @pass = Pass.new email: @email,
-                     password: @password,
-                     password_confirmation: @password_confirmation
+    @pass = Pass.new email: email,
+                     password: password,
+                     password_confirmation: password_confirmation
   end
 
   private

@@ -1,0 +1,36 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+/*
+*= require udh
+*/
+@import "foundation/components/global";
+@import "foundation/components/grid";
+@import "foundation/components/top-bar";
+
+@import url(http://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans:300italic,400italic,800italic,400,300,700,800,600);
+
+$font1: "Open Sans", sans-serif;
+$font2: "Calligraffitti", cursive;
+$ripe-lemon: #F7CA18;
+$saffron: #F4D03F;
+$primary-color: $ripe-lemon;
+$primary-color-shade: $saffron;
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $font1;
+}
+
+a {
+    text-decoration: none;
+}
+
+body,html{
+
+}
+body {
+    font-weight: 100;
+    font-family: $font1;
+    height: 100%;
+}

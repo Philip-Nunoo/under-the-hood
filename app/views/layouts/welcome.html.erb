@@ -21,6 +21,9 @@
 				<section class="top-bar-section">
 					<!-- Right Nav Section -->
 					<ul class="right">
+					<%if pass_signed_in? %>
+						<li class=""><%= link_to current_pass.email, :dashboard_index, class: "active" %></li>
+						<% end %>
 						<li class=""><a href="#">How</a></li>
 						<li class=""><%= link_to 'Pricing' %></li>
 						<li class=""><%= link_to 'Sign Up' %></li>
